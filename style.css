@@ -1,0 +1,22 @@
+:root{
+  --accent:#1e3a8a;
+  --accent-2:#0ea5a4;
+  --muted:#6b7280;
+  --bg-img: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=b1f4a4afa28b165f2b1b4ed7cc1b3a3a');
+}
+*{box-sizing:border-box}
+body{ font-family: Inter, system-ui, Arial; margin:0; color:#14213d; background: linear-gradient(135deg, rgba(14,165,164,0.06), rgba(30,58,138,0.04)); min-height:100vh; }
+.navbar{ background: linear-gradient(90deg,var(--accent), #2b6cb0); box-shadow: 0 6px 18px rgba(16,24,40,0.12); }
+.hero-bg{ background-image: var(--bg-img); background-size: cover; background-position: center; padding: 100px 0; position: relative; }
+.hero-bg::after{ content:''; position:absolute; inset:0; background: linear-gradient(180deg, rgba(2,6,23,0.45), rgba(2,6,23,0.35)); }
+.hero-content{ position:relative; z-index:2; }
+.main-area{ padding-top:60px; min-height:70vh; }
+.suggestion-box{ position:absolute; top:100%; left:0; right:0; z-index:50; max-height:240px; overflow:auto; margin-top:6px; border-radius:8px; box-shadow:0 10px 30px rgba(2,6,23,0.12); }
+.suggestion-box .list-group-item{ cursor:pointer; }
+.card.parking{ border-radius:14px; overflow:hidden; transition: transform .18s ease, box-shadow .18s ease; box-shadow: 0 6px 18px rgba(16,24,40,0.06); }
+.card.parking:hover{ transform: translateY(-6px); box-shadow: 0 14px 40px rgba(16,24,40,0.12); }
+.card.parking img{ height:160px; object-fit:cover; }
+.badge-paid{ background:linear-gradient(90deg,#fb7185,#ef4444); color:#fff; padding:.45em .6em; border-radius:.5rem; }
+.badge-free{ background:linear-gradient(90deg,#34d399,#10b981); color:#fff; padding:.45em .6em; border-radius:.5rem; }
+.booking-item{ border-radius:12px; padding:12px; background:#fff; box-shadow:0 6px 18px rgba(16,24,40,0.04); margin-bottom:12px; }
+@media (max-width:768px){ .hero-bg{ padding:60px 0; } .card.parking img{ height:140px; } }
